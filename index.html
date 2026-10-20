@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopEase | Modern Tech &amp; Everyday Gear</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header & Navigation Bar -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="#" class="brand-logo" id="logo">
+        <span class="logo-icon">🛍️</span>
+        <span class="logo-text">Shop<strong>Ease</strong></span>
+      </a>
+
+      <!-- Category Navigation -->
+      <nav class="nav-links">
+        <a href="#products-section" class="nav-link active">Catalog</a>
+        <a href="#about-section" class="nav-link">About</a>
+        <a href="#cicd-section" class="nav-link">CI/CD Info</a>
+      </nav>
+
+      <!-- Cart Button with Counter Badge -->
+      <div class="header-actions">
+        <button id="open-cart-btn" class="cart-trigger-btn" aria-label="Open Shopping Cart">
+          <span class="cart-icon">🛒</span>
+          <span class="cart-label">Cart</span>
+          <span id="cart-count" class="cart-badge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <span class="hero-tag">B.Tech IT FA2 Skill-Based Activity</span>
+        <h1 class="hero-title">High Quality Gear, Built for Modern Productivity.</h1>
+        <p class="hero-subtitle">
+          ShopEase demonstrates clean web engineering backed by an automated CI/CD pipeline using GitHub, Node.js testing, and Jenkins.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#products-section" class="btn btn-primary">Browse Catalog</a>
+          <a href="#cicd-section" class="btn btn-secondary">Explore Pipeline</a>
+        </div>
+      </div>
+      <div class="hero-banner-card">
+        <div class="banner-badge">Verified Quality</div>
+        <h3>Automated CI/CD Pipeline</h3>
+        <p>GitHub &rarr; Build &rarr; Automated Testing &rarr; Quality Check &rarr; Deployment</p>
+        <div class="status-indicator">
+          <span class="dot live-dot"></span> Pipeline Status: <strong style="color: #10b981;">Ready</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter & Catalog Section -->
+  <section id="products-section" class="products-section">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Featured Products</h2>
+          <p class="section-desc">Handpicked tech essentials with instant cart integration.</p>
+        </div>
+        
+        <!-- Filter Controls -->
+        <div class="filter-controls" id="category-filters">
+          <button class="filter-btn active" data-category="All">All Items</button>
+          <button class="filter-btn" data-category="Audio">Audio</button>
+          <button class="filter-btn" data-category="Wearables">Wearables</button>
+          <button class="filter-btn" data-category="Accessories">Accessories</button>
+          <button class="filter-btn" data-category="Peripherals">Peripherals</button>
+          <button class="filter-btn" data-category="Office">Office</button>
+        </div>
+      </div>
+
+      <!-- Products Grid -->
+      <div id="products-grid" class="products-grid">
+        <!-- Rendered dynamically by script.js -->
+        <noscript>
+          <p>Please enable JavaScript to view our catalog and use the shopping cart.</p>
+        </noscript>
+      </div>
+    </div>
+  </section>
+
+  <!-- CI/CD & Project Highlights Section -->
+  <section id="cicd-section" class="cicd-info-section">
+    <div class="container">
+      <h2 class="section-title text-center">Continuous Integration &amp; Continuous Deployment</h2>
+      <p class="section-desc text-center">Demonstrating the required DevOps lifecycle for the FA2 academic activity.</p>
+      
+      <div class="pipeline-steps-grid">
+        <div class="pipeline-step-card">
+          <div class="step-num">1</div>
+          <div class="step-icon">🐙</div>
+          <h3>GitHub SCM</h3>
+          <p>Version controlled source code hosted with commits and branch tracking.</p>
+        </div>
+        <div class="pipeline-step-card">
+          <div class="step-num">2</div>
+          <div class="step-icon">⚙️</div>
+          <h3>Build Stage</h3>
+          <p>Validates file integrity and packages production assets into the <code>dist/</code> directory.</p>
+        </div>
+        <div class="pipeline-step-card">
+          <div class="step-num">3</div>
+          <div class="step-icon">🧪</div>
+          <h3>Automated Testing</h3>
+          <p>Runs native <code>node:test</code> suite verifying cart logic, pricing, and form validations.</p>
+        </div>
+        <div class="pipeline-step-card">
+          <div class="step-num">4</div>
+          <div class="step-icon">🔍</div>
+          <h3>Quality Check</h3>
+          <p>Executes <code>check-quality.js</code> validating file presence, structure, and HTML/CSS rules.</p>
+        </div>
+        <div class="pipeline-step-card">
+          <div class="step-num">5</div>
+          <div class="step-icon">🚀</div>
+          <h3>Deployment</h3>
+          <p>Automated Jenkins deployment to the designated target directory.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about-section" class="about-section">
+    <div class="container about-container">
+      <div class="about-text">
+        <h2 class="section-title">Built for Performance &amp; Simplicity</h2>
+        <p>ShopEase was built from the ground up using pure HTML5, CSS3, and modern Vanilla JavaScript without bloated frameworks, external database overhead, or paid APIs.</p>
+        <p>It complies fully with academic standards, ensuring lightweight execution, transparent business logic, and reproducible CI/CD execution on Windows environments.</p>
+      </div>
+      <div class="about-stats">
+        <div class="stat-card">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Zero Dependencies</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">5</span>
+          <span class="stat-label">Jenkins Pipeline Stages</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">&lt; 100ms</span>
+          <span class="stat-label">Test Suite Runtime</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <span class="logo-icon">🛍️</span>
+        <span class="logo-text">Shop<strong>Ease</strong></span>
+        <p>Academic DevOps &amp; Web Development Project | B.Tech IT FA2</p>
+      </div>
+      <div class="footer-links">
+        <a href="#products-section">Catalog</a>
+        <a href="#cicd-section">Pipeline Specs</a>
+        <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <div class="footer-copy">
+        &copy; 2026 ShopEase E-Commerce. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-out Shopping Cart Drawer -->
+  <div id="cart-drawer-overlay" class="drawer-overlay hidden" aria-hidden="true"></div>
+  <aside id="cart-drawer" class="cart-drawer hidden" aria-labelledby="cart-title" role="dialog" aria-modal="true">
+    <div class="drawer-header">
+      <div class="drawer-header-left">
+        <h2 id="cart-title" class="drawer-title">Shopping Cart</h2>
+        <span id="drawer-item-count" class="drawer-badge">0 items</span>
+      </div>
+      <button id="close-cart-btn" class="close-icon-btn" aria-label="Close Shopping Cart">&times;</button>
+    </div>
+
+    <!-- Cart Items Scroll Area -->
+    <div id="cart-items-container" class="cart-items-container">
+      <!-- Injected by script.js -->
+    </div>
+
+    <!-- Cart Summary & Actions -->
+    <div class="drawer-footer" id="cart-footer">
+      <div class="summary-breakdown">
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <span id="cart-subtotal">$0.00</span>
+        </div>
+        <div class="summary-row">
+          <span>Estimated Tax (5%)</span>
+          <span id="cart-tax">$0.00</span>
+        </div>
+        <div class="summary-row">
+          <span>Shipping</span>
+          <span class="shipping-free">FREE</span>
+        </div>
+        <div class="summary-row total-row">
+          <span>Total</span>
+          <span id="cart-total">$0.00</span>
+        </div>
+      </div>
+
+      <div class="drawer-action-buttons">
+        <button id="open-checkout-btn" class="btn btn-primary btn-block">
+          Proceed to Checkout &rarr;
+        </button>
+        <button id="clear-cart-btn" class="btn btn-outline btn-block">
+          Clear Cart
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Checkout Modal -->
+  <div id="checkout-modal-overlay" class="modal-overlay hidden" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="checkout-heading">
+      <div class="modal-header">
+        <h3 id="checkout-heading" class="modal-title">Checkout Details</h3>
+        <button id="close-checkout-btn" class="close-icon-btn" aria-label="Close Checkout">&times;</button>
+      </div>
+      
+      <form id="checkout-form" class="checkout-form" novalidate>
+        <div class="form-notice">
+          ℹ️ <strong>Demo Simulation:</strong> No real payment or financial details are collected.
+        </div>
+
+        <!-- Full Name -->
+        <div class="form-group">
+          <label for="fullName">Full Name <span class="required">*</span></label>
+          <input type="text" id="fullName" name="fullName" placeholder="e.g. Alex Johnson" required autocomplete="name">
+          <span class="field-error" id="fullName-error"></span>
+        </div>
+
+        <!-- Email Address -->
+        <div class="form-group">
+          <label for="email">Email Address <span class="required">*</span></label>
+          <input type="email" id="email" name="email" placeholder="e.g. alex@example.com" required autocomplete="email">
+          <span class="field-error" id="email-error"></span>
+        </div>
+
+        <!-- Shipping Address -->
+        <div class="form-group">
+          <label for="address">Shipping Street Address <span class="required">*</span></label>
+          <textarea id="address" name="address" rows="2" placeholder="e.g. 124 Innovation Way, Tech Campus" required autocomplete="street-address"></textarea>
+          <span class="field-error" id="address-error"></span>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" value="Metro City" placeholder="City">
+          </div>
+          <div class="form-group">
+            <label for="postalCode">Postal Code</label>
+            <input type="text" id="postalCode" name="postalCode" value="560001" placeholder="ZIP / PIN">
+          </div>
+        </div>
+
+        <!-- Payment Method (Demo) -->
+        <div class="form-group">
+          <label>Payment Method (Demo Mode)</label>
+          <div class="payment-options">
+            <label class="radio-card selected">
+              <input type="radio" name="paymentMethod" value="CashOnDelivery" checked>
+              <span>💵 Cash on Delivery (Demo)</span>
+            </label>
+            <label class="radio-card">
+              <input type="radio" name="paymentMethod" value="DemoUPI">
+              <span>⚡ Fast UPI / Card (Simulated)</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="checkout-order-summary">
+          <span>Payable Amount:</span>
+          <strong id="checkout-summary-total">$0.00</strong>
+        </div>
+
+        <div class="modal-footer-actions">
+          <button type="button" id="cancel-checkout-btn" class="btn btn-secondary">Back to Cart</button>
+          <button type="submit" id="place-order-btn" class="btn btn-primary">Place Order Now</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Order Confirmation Modal -->
+  <div id="confirmation-modal-overlay" class="modal-overlay hidden" aria-hidden="true">
+    <div class="modal-card confirmation-card" role="dialog" aria-modal="true">
+      <div class="confirmation-icon">🎉</div>
+      <h3 class="confirmation-title">Order Placed Successfully!</h3>
+      <p class="confirmation-message">Thank you for your demo order. Here is your confirmation receipt:</p>
+      
+      <div class="confirmation-details-box" id="confirmation-details">
+        <!-- Rendered by script.js -->
+      </div>
+
+      <button id="close-confirmation-btn" class="btn btn-primary btn-block">Continue Shopping</button>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <!-- App Script (ES Module) -->
+  <script type="module" src="script.js"></script>
+</body>
+</html>

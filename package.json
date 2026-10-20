@@ -1,0 +1,23 @@
+{
+  "name": "shopease-ecommerce-cicd",
+  "version": "1.0.0",
+  "description": "ShopEase - E-Commerce Application with CI/CD Pipeline using Jenkins for B.Tech IT FA2",
+  "main": "script.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test tests/ecommerce.test.js",
+    "quality": "node check-quality.js",
+    "build": "node build.js"
+  },
+  "keywords": [
+    "ecommerce",
+    "cicd",
+    "jenkins",
+    "vanilla-javascript",
+    "testing",
+    "agile"
+  ],
+  "author": "Student Developer",
+  "license": "MIT"
+}
